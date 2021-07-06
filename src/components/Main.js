@@ -33,6 +33,26 @@ function Main(props) {
         getAttractions();
     }
 
+    //function to update an attraction
+    const updateAttractions = async (attraction, id) => {
+        await fetch(URL + id, {
+            method: 'PUT',
+            headers: {
+                'Content-Type': 'Application/json',
+            },
+            body: JSON.stringify(attraction),
+        })
+        getAttractions();
+    }
+
+    //function to delete an attraction
+    const deleteAttractions = async id => {
+        await fetch(URL + id, {
+            method: 'DELETE'
+        })
+        getAttractions();
+    }
+
     //useEffect to make initial call for attractions list
     useEffect(() => getAttractions(), []);
 
@@ -52,6 +72,9 @@ return (
         path='/attraction/:id'
         render={(rp) => (
             <Show
+            attractions={attractions}
+            updateAttractions={updateAttractions}
+            deleteAttractions={deleteAttractions}
             {...rp}
             />
         )}
