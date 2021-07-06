@@ -1,5 +1,6 @@
-import  {useState} from 'react';
 import { Link } from 'react-router-dom';
+import  {useState} from 'react';
+
 
 function Index(props) {
     //state to hold the form data
@@ -8,7 +9,7 @@ function Index(props) {
         image: '',
         blurb: '',
         location: '',
-        link: ''
+        link: '',
     })
 
     //handleChange function for form
@@ -19,13 +20,18 @@ function Index(props) {
     //handleSubmit function for form
     const handleSubmit = (event) => {
         event.preventDefault();
-        props.createPeople(newForm);
+        if(!props.user) {
+            alert('You must be logged in')
+            return;
+        }
+
+        props.createAttractions(newForm);
         setNewForm({
         name: '',
         image: '',
         blurb: '',
         location: '',
-        link: ''
+        link: '',
         })
     }
 
@@ -33,8 +39,8 @@ function Index(props) {
     const loaded = () => {
         return props.attractions.map((attraction) => (
             <div key={attraction._id} className='attraction'>
-                <Link to={`/attraction/${attraction.id}`}>
-                    <img src={attraction.image} alt={attraction.name}/>
+                <Link to={`/attraction/${attraction._id}`}>
+                    {attraction.image && <img src={attraction.image} alt={attraction.name}/>}
                 </Link>
             </div>
         ));
@@ -83,10 +89,10 @@ function Index(props) {
                   placeholder='link'
                   onChange={handleChange}
                   />
-                  <input
+                  <button
                   type='submit'
-                  value='Create an Attraction'
-                  />
+                  disabled={!props.user}
+                  >Create an Attraction</button>
                   </form> 
           {props.attractions ? loaded() : loading()}  
           </section>

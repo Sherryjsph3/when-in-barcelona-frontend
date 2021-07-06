@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { Route, Switch } from 'react-router-dom';
+import { Route, Switch, Redirect } from 'react-router-dom';
 import Index from '../pages/Index';
 import Show from '../pages/Show';
 import About from '../pages/About';
@@ -45,40 +45,50 @@ function Main(props) {
         getAttractions();
     }
 
-    //function to delete an attraction
-    const deleteAttractions = async id => {
-        await fetch(URL + id, {
-            method: 'DELETE'
-        })
-        getAttractions();
-    }
-
     //useEffect to make initial call for attractions list
     useEffect(() => getAttractions(), []);
 
 return (
     <main>
         <Switch>
-            <Route exact path='/'>
-                <Home/>
-            </Route>
+            <Route path='/home'
+            render={(rp) => {
+            if(!props.user) {
+                // alert('You must be logged in');
+                return <Redirect to='/home'/>
+              } else {
+            return (
+                <Home 
+                {...rp}
+                />
+                );
+            }
+            }} 
+            />
         <Route path='/about'>
             <About/>
         </Route>
-        <Route path='/attraction'>
-            <Index attractions={attractions} createAttractions={createAttractions}/>
+        <Route exact path='/'>
+            <Index user={props.user} attractions={attractions} createAttractions={createAttractions}/>
         </Route>
         <Route 
         path='/attraction/:id'
-        render={(rp) => (
+        render={(rp) => {
+            if(!props.user) {
+                //show a modal or some alert
+                alert('you must be logged in for that');
+                return <Redirect to='/'/>
+              } else {
+            return (
             <Show
             attractions={attractions}
             updateAttractions={updateAttractions}
-            deleteAttractions={deleteAttractions}
             {...rp}
             />
-        )}
-        />
+            )
+        }
+        }}    
+         />
         </Switch>
     </main>
     );
