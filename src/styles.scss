@@ -10,4 +10,39 @@ footer {
     justify-content: center;
 }
 
+//Mixins -- predefined styles -- a theme
+@mixin white-text-black-bg {
+    color: $contrastcolor;
+    background-color: $maincolor;
+}
+
+@mixin black-text-white-bg {
+    color: $maincolor;
+    background-color: $contrastcolor;
+}
+//========= BODY =========
+body {
+    margin: 0;
+
+}
 //========= HEADER =========
+nav {
+    @include white-text-black-bg;
+    display: flex;
+    justify-content: flex-start;
+    a {
+        @include white-text-black-bg;
+        text-decoration: none;
+        font-family: Helvetica;
+        div {
+            margin: 10px;
+            font-size: large;
+        }
+    }
+}
+//========= IMAGES =========
+img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+}

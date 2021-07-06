@@ -11,7 +11,7 @@ function Main(props) {
     const [ attractions, setAttractions ] = useState(null);
 
     //function to make api call
-    const URL = 'https://localhost:4000/attraction/'
+    const URL = 'http://localhost:4000/attraction/'
     
     const getAttractions = async () => {
         const response = await fetch(URL);
@@ -36,7 +36,7 @@ function Main(props) {
     //useEffect to make initial call for attractions list
     useEffect(() => getAttractions(), []);
 
-
+return (
     <main>
         <Switch>
             <Route exact path='/'>
@@ -58,6 +58,7 @@ function Main(props) {
         />
         </Switch>
     </main>
+    );
 }
 
 export default Main;
