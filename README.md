@@ -25,11 +25,11 @@ A MERN Stack application that showcases Barcelona's top 10 attractions to visit.
 * As a user, I want to be able to add, update and/or delete new and existing attractions
 
 ## `Screenshots`
-### `Wireframe`
+### Wireframe
 ![When in Barcelona wireframe](public/imgs/When-in-Barcelona-wireframe.png)
-### `ERD`
+### ERD
 ![When in Barcelona ERD](public/imgs/When-in-Barcelona-erd.png)
-### `Working App`
+### Working App
 ![When in Barcelona hompage]()
 ![When in Barcelona about page]()
 ![When in Barcelona index page]()
