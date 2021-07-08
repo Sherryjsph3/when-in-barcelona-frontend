@@ -1,7 +1,6 @@
 import { Link } from 'react-router-dom';
 import  {useState} from 'react';
 
-
 function Index(props) {
     //state to hold the form data
     const [ newForm, setNewForm ] = useState({
