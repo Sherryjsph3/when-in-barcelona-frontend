@@ -1,5 +1,5 @@
 import {login, logout} from '../services/firebase'
-import { Link } from 'react-router-dom';
+
 
 function Header(props) {
     return (
@@ -9,10 +9,6 @@ function Header(props) {
             alignItems: 'center',
             justifyContent: 'space-between'
         }}>
-            <Link to='/home'>
-            <h2>When in</h2>
-            <h3>Barcelona</h3>
-            </Link>
             <div style={{ display: 'flex', alignItems: 'center'}}>
                 { 
                 props.user ?
@@ -45,6 +41,7 @@ function Header(props) {
                 }
             </div>
         </nav>
+       
     );
 }
 

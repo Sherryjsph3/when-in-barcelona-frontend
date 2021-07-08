@@ -1,18 +1,11 @@
 //========= VARIABLES =========
 
-$maincolor: black;
+$maincolor: rgb(218, 87, 17);
 $contrastcolor: white;
+$secondarycolor: rgb(72, 98, 97);
 $mainfont: mirande;
 $subfont: lightly Sailler;
 $accentfont: amalfi coast;
-
-
-// footer {
-//     display: flex;
-//     align-items: center;
-//     height: 50px;
-//     justify-content: center;
-// }
 
 //Mixins -- predefined styles -- a theme
 @mixin white-text-black-bg {
@@ -24,24 +17,34 @@ $accentfont: amalfi coast;
     color: $maincolor;
     background-color: $contrastcolor;
 }
-//========= BODY =========
-body {
-    margin: 0;
 
+
+//========= MAIN =========
+* {
+    box-sizing: border-box;
+    margin: 0;
 }
+
+body {
+    background-image: url(https://i.imgur.com/Mmb7WX6.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+   
+    
+}
+
 //========= HEADER =========
-nav {
-    font-family: mirande;
-    @include white-text-black-bg;
+nav {  
+    font-family: $mainfont;
+    font-size: 25px;
+    color: $secondarycolor;
     display: flex;
     justify-content: flex-start;
-    a {
-        @include white-text-black-bg;
-        text-decoration: none;
-        font-family: Helvetica;
+    div {
+        margin-left: 600px;
+        margin-top:10px;
         div {
-            margin: 10px;
-            font-size: large;
+            margin-left: 10px;
         }
     }
 }
@@ -51,10 +54,104 @@ img {
     height: 300px;
     object-fit: cover;
 }
+
 ul {
     list-style-type: none;
+    font-family: $mainfont;
+    font-size: 40px;
+    float: left;
+    margin-top: -690px;
+    padding-left: 40px;
+    text-align: left;
 }
 
 a {
     text-decoration: none;
+    color: $secondarycolor;  
 }
+
+.logo {
+    font-family: $mainfont;
+    color: $contrastcolor;
+    margin-top: -200px;
+    margin-left: -70px;
+    font-size: 60px;
+    margin-bottom: -30px;
+}
+
+.sub-logo {
+    font-family: $accentfont;
+    color: $contrastcolor;
+    font-size: 33px;
+    margin-left: -30px;
+}
+
+.img-home {
+    margin-top: 120px;
+    width: 800px;
+    height: auto;
+}
+
+.sec-home {
+    float: left;
+    margin: -180px 750px 0px 90px;
+    padding-left: 100px;
+    text-align: justify;
+    font-size: 14px;
+    font-family: $mainfont;
+    color: $secondarycolor;
+}
+.name {
+    font-family: $accentfont;
+    font-size: 10px;
+}
+
+.line {
+    margin-right: 90px;
+}
+
+.img-about {
+    margin-top: 85px;
+    width: 520px;
+    height: auto;
+   margin-right:450px;
+   box-shadow: 3px 3px 3px rgb(41, 41, 41, 0.70);  
+}
+
+.about-h2 {
+font-family: $mainfont;
+  margin-top: 300px;
+  font-size: 30px;
+  color: $secondarycolor;
+}
+
+.about-p {
+    font-family: $subfont;
+    font-size: 15px;
+    margin-left: 650px;
+    margin-right: 90px;
+    margin-top: -380px;
+    padding-right: 30px;
+    text-align: justify;
+    color: $secondarycolor;
+}
+
+.logotwo {
+    font-family: $mainfont;
+    color: $secondarycolor;
+    font-size: 60px;
+    text-align: left;
+    margin-left: 60px;
+}
+
+.sub-logotwo {
+    font-family: $accentfont;
+    color: $secondarycolor;
+    font-size: 30px;
+    text-align: left;
+    margin-left: 80px;
+    margin-top: -25px;
+}
+
+
+
