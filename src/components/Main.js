@@ -11,7 +11,7 @@ function Main(props) {
     const [ attractions, setAttractions ] = useState(null);
 
     //function to make api call
-    const URL = 'http://localhost:4000/attraction/'
+    const URL = 'https://when-in-barcelona-backend.herokuapp.com/attraction'
     
     const getAttractions = async () => {
         const response = await fetch(URL);
