@@ -40,7 +40,7 @@ function Index(props) {
         return props.attractions.map((attraction) => (
             <div key={attraction._id} className='attraction'>
                 <Link to={`/attraction/${attraction._id}`}>
-                    {attraction.image && <img src={attraction.image} alt={attraction.name}/>}
+                    {attraction.image && <img className='indeximg' src={attraction.image} alt={attraction.name}/>}
                 </Link>
             </div>
         ));
@@ -52,9 +52,24 @@ function Index(props) {
       //onSubmit will occur when the form is submitted w/ the button click
       //onChange will fire when there's a change to any of the forms input elements
       return (
-          <section>
+          <>
+        <Link to='/home'>
+        <h2 className='logotwo'>When in</h2>
+        <h3 className='sub-logotwo'>Barcelona</h3>
+        </Link>
+        <div className='idx'>
+        <p className='idxp'>" The journey changes you, It should change you. You take something with you. Hopefully you leave something good behind... "</p>
+        <br/>
+        <hr className='linetwo'/>
+        <br/>
+        <p className='nametwo'>Anthony Bourdion</p>
+        </div>
+        <img className='idximg' src='https://i.imgur.com/3ialWpI.jpg' alt='aesthetic'/>
+
+          <section className='form'>
               <form onSubmit={handleSubmit}>
                   <input
+                  className='idxinput'
                   type='text'
                   value={newForm.name}
                   name='name'
@@ -62,6 +77,7 @@ function Index(props) {
                   onChange={handleChange}
                   />
                   <input
+                  className='idxinput'
                   type='text'
                   value={newForm.image}
                   name='image'
@@ -69,6 +85,7 @@ function Index(props) {
                   onChange={handleChange}
                   />
                   <input
+                  className='idxinput'
                   type='text'
                   value={newForm.blurb}
                   name='blurb'
@@ -76,6 +93,7 @@ function Index(props) {
                   onChange={handleChange}
                   />
                   <input
+                  className='idxinput'
                   type='text'
                   value={newForm.location}
                   name='location'
@@ -83,6 +101,7 @@ function Index(props) {
                   onChange={handleChange}
                   />
                   <input
+                  className='idxinput'
                   type='text'
                   value={newForm.link}
                   name='link'
@@ -92,10 +111,11 @@ function Index(props) {
                   <button
                   type='submit'
                   disabled={!props.user}
-                  >Create an Attraction</button>
+                  >Explore</button>
                   </form> 
           {props.attractions ? loaded() : loading()}  
           </section>
+          </>
       );
       
     }

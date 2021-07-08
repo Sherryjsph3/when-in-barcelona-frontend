@@ -45,48 +45,67 @@ function Main(props) {
         getAttractions();
     }
 
+     //function to delete an attraction
+     const deleteAttractions = async id => {
+        await fetch(URL + id, {
+            method: 'DELETE'
+        })
+        getAttractions();
+    }
+
     //useEffect to make initial call for attractions list
     useEffect(() => getAttractions(), []);
 
 return (
     <main>
         <Switch>
-            <Route path='/home'
-            render={(rp) => {
+            <Route path='/home'>
+                <Home/>
+             </Route>
+
+        <Route path='/about'
+        render={(rp) => {
             if(!props.user) {
-                // alert('You must be logged in');
+                alert('You must be logged in');
                 return <Redirect to='/home'/>
               } else {
             return (
-                <Home 
-                {...rp}
-                />
-                );
-            }
+            <About
+            {...rp}
+            />
+             )};
             }} 
             />
-        <Route path='/about'>
-            <About/>
-        </Route>
-        <Route exact path='/'>
-            <Index user={props.user} attractions={attractions} createAttractions={createAttractions}/>
-        </Route>
+
+        <Route exact path='/'
+        render={(rp) => {
+        if(!props.user) {
+            alert('You must be logged in');
+            return <Redirect to='/home'/>
+          } else {
+        return (
+            <Index user={props.user} attractions={attractions} createAttractions={createAttractions}
+            {...rp}
+            />
+             )};
+            }} 
+            />
+
         <Route 
         path='/attraction/:id'
         render={(rp) => {
             if(!props.user) {
-                //show a modal or some alert
                 alert('you must be logged in for that');
                 return <Redirect to='/'/>
               } else {
             return (
             <Show
+            {...rp}
             attractions={attractions}
             updateAttractions={updateAttractions}
-            {...rp}
+            deleteAttractions={deleteAttractions}
             />
-            )
-        }
+            )}
         }}    
          />
         </Switch>
