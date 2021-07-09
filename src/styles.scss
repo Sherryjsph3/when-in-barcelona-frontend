@@ -7,18 +7,6 @@ $mainfont: mirande;
 $subfont: lightly Sailler;
 $accentfont: amalfi coast;
 
-//Mixins -- predefined styles -- a theme
-@mixin white-text-black-bg {
-    color: $contrastcolor;
-    background-color: $maincolor;
-}
-
-@mixin black-text-white-bg {
-    color: $maincolor;
-    background-color: $contrastcolor;
-}
-
-
 //========= MAIN =========
 * {
     box-sizing: border-box;

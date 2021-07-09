@@ -20,7 +20,7 @@ A MERN Stack application that showcases Barcelona's top attractions to visit. Wh
 
 ## `User Stories`
 * As a user, I would like some sense of security and to be able to login and have my activity saved in one place
-* As a user, I want to be able to get to a quick glance of Barcelona's top landmarks
+* As a user, I want to be able to get to a quick glance of Barcelona's top landmarks to make the planning process seamless
 * As a user, I want to be able to add, update and/or delete new and existing attractions
 
 ## `Screenshots`
