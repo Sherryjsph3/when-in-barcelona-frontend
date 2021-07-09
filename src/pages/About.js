@@ -8,7 +8,7 @@ function About(props) {
         <h3 className='sub-logotwo'>Barcelona</h3>
         </Link>
 
-        <h2 className='about-h2'>Best Attractions to Visit When in Barcelona</h2>
+        <h2 className='about-h2'>Barcelona</h2>
 
         <img className='img-about' src='/imgs/aboutpage.jpg' alt='aboutphoto'/>
         

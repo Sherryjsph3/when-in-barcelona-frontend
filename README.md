@@ -1,6 +1,6 @@
 # When in Barcelona
 
-A MERN Stack application that showcases Barcelona's top 10 attractions to visit. When in Barcelona gives you a quick view with the ability to create new attractions update or delete existing attractions.
+A MERN Stack application that showcases Barcelona's top attractions to visit. When in Barcelona gives you a quick view with the ability to create new attractions update and/or delete existing landmarks.
 
 ## `Technologies Used`
 * HTML5
@@ -10,7 +10,6 @@ A MERN Stack application that showcases Barcelona's top 10 attractions to visit.
 * Express
 * React
 * MongoDB/Mongoose
-* [Icons](https://fontawesome.com/icons?d=gallery&p=2)
 * [Figma](https://www.figma.com/files/user/979381893432674988?fuid=979381893432674988)
 * [Pinterest](https://www.pinterest.com/)
 * [Unsplash](https://unsplash.com/)
@@ -21,7 +20,7 @@ A MERN Stack application that showcases Barcelona's top 10 attractions to visit.
 
 ## `User Stories`
 * As a user, I would like some sense of security and to be able to login and have my activity saved in one place
-* As a user, I want to be able to get to a quick view of Barcelona's top ten attractions
+* As a user, I want to be able to get to a quick glance of Barcelona's top landmarks
 * As a user, I want to be able to add, update and/or delete new and existing attractions
 
 ## `Screenshots`
@@ -30,19 +29,17 @@ A MERN Stack application that showcases Barcelona's top 10 attractions to visit.
 ### ERD
 ![When in Barcelona ERD](public/imgs/When-in-Barcelona-erd.png)
 ### Working App
-![When in Barcelona hompage]()
-![When in Barcelona about page]()
-![When in Barcelona index page]()
-![When in Barcelona show page]()
+![When in Barcelona home page](public/imgs/home.png)
+![When in Barcelona about page](public/imgs/about.png)
+![When in Barcelona index page](public/imgs/index.png)
+![When in Barcelona show page](public/imgs/show.png)
 
-## `Unsolved Problems`
-* 
 ## `Future Enhancements`
-* The ability for the user to search for restaurants, shopping etc from the web app.
+* The ability for the user to search for different restaurants, shopping, nightlife and more from the web app.
 
 ## `Getting Started`
 * [Click here](https://trello.com/b/LjZtA3dX/when-in-barcelona-mern-stack-app) to see the Trello Board!
-* [Click here]() to see the deployed app!
+* [Click here](https://when-in-barcelona-frontend.herokuapp.com/) to see the deployed app!
 
 * * *
 * * *
