@@ -7,7 +7,7 @@ import Home from '../pages/Home'
 
 function Main(props) {
     //state to hold list of attractions
-    //attractions is the variable and setAttractions holds the variable
+    //attractions is the variable and setAttractions holds whats in the variable
     const [ attractions, setAttractions ] = useState(null);
 
     //function to make api call
