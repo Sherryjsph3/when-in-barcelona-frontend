@@ -18,6 +18,8 @@ A MERN Stack application that showcases Barcelona's top attractions to visit. Wh
 * [Invisionapp](https://www.invisionapp.com/inside-design/design-resources/do/)
 * [daFont](https://www.dafont.com/) 
 
+[The Backend](https://github.com/Sherryjsph3/when-in-barcelona-backend)
+
 ## `User Stories`
 * As a user, I would like some sense of security and to be able to login and have my activity saved in one place
 * As a user, I want to be able to get to a quick glance of Barcelona's top landmarks to make the planning process seamless
