@@ -12,7 +12,7 @@ function Main(props) {
 
     //function to make api call
     const URL = 'https://when-in-barcelona-backend.herokuapp.com/attraction'
-    
+    // const URL = 'https://localhost:3000'
     const getAttractions = async () => {
         const response = await fetch(URL);
         const data = await response.json();
