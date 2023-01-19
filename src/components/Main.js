@@ -14,8 +14,7 @@ function Main(props) {
     const URL = 'https://when-in-barcelona-backend.herokuapp.com/attraction'
     
     const getAttractions = async () => {
-        const response = await fetch(URL,  {
-            mode: 'no-cors'});
+        const response = await fetch(URL);
         const data = await response.json();
         setAttractions(data);
     };
