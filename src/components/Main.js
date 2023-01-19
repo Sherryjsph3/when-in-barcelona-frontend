@@ -11,10 +11,11 @@ function Main(props) {
     const [ attractions, setAttractions ] = useState(null);
 
     //function to make api call
-    const URL = 'https://when-in-barcelona-backend.herokuapp.com/attraction/'
+    const URL = 'https://when-in-barcelona-backend.herokuapp.com/attraction'
     
     const getAttractions = async () => {
-        const response = await fetch(URL);
+        const response = await fetch(URL,  {
+            mode: 'no-cors'});
         const data = await response.json();
         setAttractions(data);
     };
