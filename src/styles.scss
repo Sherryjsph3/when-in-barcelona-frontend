@@ -24,11 +24,15 @@ nav {
     font-family: $mainfont;
     font-size: 23px;
     color: $secondarycolor;
-    display: flex;
-    justify-content: flex-start;
+    // display: flex;
+    // justify-content: flex-start;
+    padding: 10px;
     div {
-        margin-left: 600px;
+        // margin-left: 600px;
+       
+        float: right;
         margin-top:12px;
+        margin-right: 150px;
         div {
             margin-left: 10px;
         }
@@ -42,8 +46,8 @@ ul {
     font-family: $mainfont;
     font-size: 40px;
     float: left;
-    margin-top: -690px;
-    padding-left: 40px;
+    margin-top: 50px;
+    padding-left: 60px;
     text-align: left;
 }
 

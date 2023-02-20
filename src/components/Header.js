@@ -5,7 +5,7 @@ function Header(props) {
     return (
         <nav className="nav"
         style={{
-            display: 'flex',
+            // display: 'flex',
             alignItems: 'center',
             justifyContent: 'space-between'
         }}>
