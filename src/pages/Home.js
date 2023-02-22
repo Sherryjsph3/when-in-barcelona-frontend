@@ -7,9 +7,14 @@ function Home(props) {
         <li><Link to='/about'>About</Link></li>
         <li><Link to='/'>Attractions</Link></li>
     </ul>
-    <img className='img-home'src='/imgs/barcelona image.png' alt='new'/>
-    <h2 className='logo'>When in</h2>
-    <h3 className='sub-logo'>Barcelona</h3>
+    {/* <img className='img-home'src='/imgs/barcelona image.png' alt='new'/> */}
+    <div className='img-home'>
+        <div className="home-logo">
+            <h2 className='logo'>When in</h2>
+            <h3 className='sub-logo'>Barcelona</h3>
+        </div>
+    </div>
+    
     
     
     <div className='sec-home'>

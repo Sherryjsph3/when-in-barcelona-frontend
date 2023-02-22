@@ -6,10 +6,10 @@ function Header(props) {
         <nav className="nav"
         style={{
             // display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'space-between'
+            // alignItems: 'center',
+            // justifyContent: 'space-between'
         }}>
-            <div style={{ display: 'flex', alignItems: 'center'}}>
+            <div className="right-nav" style={{ display: 'flex', alignItems: 'center'}}>
                 { 
                 props.user ?
                 <>
