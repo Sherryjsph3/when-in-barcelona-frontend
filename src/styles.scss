@@ -43,7 +43,7 @@ nav {
         // margin-left: 600px;
        
         float: right;
-        margin-top:12px;
+        margin-top:20px;
         width: 395px;
         // div {
         //     margin-left: 10px;
@@ -58,7 +58,7 @@ ul {
     font-family: $mainfont;
     font-size: 40px;
     float: left;
-    // margin-top: 50px;
+    margin-top: -125px;
     padding-left: 60px;
     text-align: left;
 }
@@ -69,8 +69,8 @@ a {
 }
 .home-logo {
     position: relative;
-    top: 860px;
-    left: 97px;
+    bottom: 84px;
+    right: 34px;
 }
 .logo {
     font-family: $mainfont;
@@ -91,15 +91,15 @@ a {
 }
 
 .img-home {
-    margin: 0 auto 0;
+    margin: 164px auto 0;
     width: 1000px;
-    height: 100%;
+    // height: 100%;
     // height: auto;
     background: url(./barcelonaimage.png) center;
     background-repeat: no-repeat ;
     background-size: contain;
     position: relative;
-    padding-top: 350px;
+    padding-top: 550px;
 }
 
 .sec-home {
@@ -109,7 +109,7 @@ a {
     font-size: 14px;
     font-family: $mainfont;
     color: $secondarycolor;
-    margin: -279px 0 0px 130px;
+    margin: -224px 0 0px -21px;
     width: 300px;
 
 }
@@ -268,4 +268,60 @@ font-family: $accentfont;
     text-align: center;
     padding: 5px;
     font-size: 13px;
+}
+
+@media (max-width: 991px) {
+    .img-home {
+        width: 767px;
+    }
+    .sec-home {
+        margin: -224px 0 0px -80px;
+        width: 275px;
+        font-size: 12px;
+    }
+}
+@media (max-width: 767px) {
+    nav {
+        font-size: 20px;
+        padding-right: 0;
+    }
+    .img-home {
+        margin: 0 auto 0;
+        width: 400px;
+    }
+    ul {
+        font-size: 30px;
+        margin-top: 45px;
+    }
+    .logo {
+        font-size: 35px;
+        margin-bottom: -20px;
+    }
+    .sub-logo {
+        font-size: 17px;
+        left: 8px;    
+    }
+    .home-logo {
+        bottom: 200px;
+        right: 15px;
+    }
+    .sec-home {
+        margin: -150px auto 0;
+        width: 275px;
+        font-size: 12px;
+        float: unset;
+        padding-left: 0;
+    }
+}
+@media(max-width: 575px) {
+    nav {
+        font-size: 18px;
+    }
+    .right-nav {
+        width: 330px;
+    }
+    ul {
+        font-size: 25px;
+        padding-left: 30px;
+    }
 }
