@@ -57,13 +57,17 @@ function Index(props) {
         <h3 className='sub-logotwo'>Barcelona</h3>
         </Link>
         <div className='idx'>
-        <p className='idxp'>" The journey changes you, It should change you. You take something with you. Hopefully you leave something good behind... "</p>
-        <br/>
-        <hr className='linetwo'/>
-        <br/>
-        <p className='nametwo'>Anthony Bourdion</p>
+        <div className="index-header" style={{width:'50%'}}></div>
+         <div className="index-header2" style={{width:'50%'}}>
+            <p className='idxp'>" The journey changes you, It should change you. You take something with you. Hopefully you leave something good behind... "</p>
+            <br/>
+            <hr className='linetwo'/>
+            <br/>
+            <p className='nametwo'>Anthony Bourdion</p>
+            <img className='idximg' src='https://i.imgur.com/3ialWpI.jpg' alt='aesthetic'/>
+         </div>
         </div>
-        <img className='idximg' src='https://i.imgur.com/3ialWpI.jpg' alt='aesthetic'/>
+       
 
           <section className='form'>
               <form onSubmit={handleSubmit}>
