@@ -1,3 +1,18 @@
+@font-face {
+    font-family: mirande;
+    src: url('./fonts/Mirande.ttf');
+}
+
+@font-face {
+    font-family: lightly Sailler;
+    src: url('./lightly Sailler dafont.otf');
+}
+
+@font-face {
+    font-family: amalfi coast;
+    src: url('./fonts/Amalfi Coast.ttf');
+}
+
 //========= VARIABLES =========
 
 $maincolor: rgb(218, 87, 17);
@@ -6,6 +21,7 @@ $secondarycolor: rgb(72, 98, 97);
 $mainfont: mirande;
 $subfont: lightly Sailler;
 $accentfont: amalfi coast;
+
 
 //========= MAIN =========
 * {
