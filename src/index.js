@@ -7,7 +7,7 @@ import reportWebVitals from './reportWebVitals';
 import { BrowserRouter as Router } from "react-router-dom";
 import './fonts/Mirande.ttf';
 import './fonts/Amalfi Coast.ttf';
-import './fonts/Lightly Sailler dafont.otf';
+// import './fonts/Lightly Sailler dafont.otf';
 
 ReactDOM.render(
   <Router>
