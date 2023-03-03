@@ -4,8 +4,8 @@ function Home(props) {
     return  (
         <>
     <ul>
-        <li><Link to='/about'>About</Link></li>
-        <li><Link to='/'>Attractions</Link></li>
+        <Link to='/about'><li>About</li></Link>
+        <Link to='/'><li>Attractions</li></Link>
     </ul>
     {/* <img className='img-home'src='/imgs/barcelona image.png' alt='new'/> */}
     <div className='img-home'>
